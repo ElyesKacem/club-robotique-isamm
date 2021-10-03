@@ -39,22 +39,78 @@ export const Contact = (props) => {
           <div className='col-md-8'>
             <div className='row'>
               <div className='section-title'>
-                <h2>Get In Touch</h2>
+                <h2>Join US</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
+                  Please fill out the form below to send us ur application and we will
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name='sentMessage' validate onSubmit={handleSubmit}>
+              <form name='sentMessage' method="POST" validate action="https://docs.google.com/forms/d/e/1FAIpQLScg6FYi-m4BHptoI3d7t8fE8mq0jYkIDnQ7pSaLmvncYgBkfg/formResponse">
                 <div className='row'>
+                <div className='col-md-6'>
+                    <div className='form-group'>
+                      <input
+                        type='text'
+                        id='name'
+                        name='entry.1291740113'
+                        className='form-control'
+                        placeholder='First Name'
+                        required
+                        onChange={handleChange}
+                      />
+                      <p className='help-block text-danger'></p>
+                    </div>
+                  </div>
                   <div className='col-md-6'>
                     <div className='form-group'>
                       <input
                         type='text'
                         id='name'
-                        name='name'
+                        name='entry.444349995'
                         className='form-control'
-                        placeholder='Name'
+                        placeholder='Last Name'
+                        required
+                        onChange={handleChange}
+                      />
+                      <p className='help-block text-danger'></p>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='form-group'>
+                      <input
+                        type='text'
+                        id='name'
+                        name='entry.1241671488'
+                        className='form-control'
+                        placeholder='Level'
+                        required
+                        onChange={handleChange}
+                      />
+                      <p className='help-block text-danger'></p>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='form-group'>
+                      <input
+                        type='text'
+                        id='name'
+                        name='entry.1210087097'
+                        className='form-control'
+                        placeholder='Section'
+                        required
+                        onChange={handleChange}
+                      />
+                      <p className='help-block text-danger'></p>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='form-group'>
+                      <input
+                        type='text'
+                        id='name'
+                        name='entry.933118808'
+                        className='form-control'
+                        placeholder='Phone Number'
                         required
                         onChange={handleChange}
                       />
@@ -66,7 +122,7 @@ export const Contact = (props) => {
                       <input
                         type='email'
                         id='email'
-                        name='email'
+                        name='entry.319692905'
                         className='form-control'
                         placeholder='Email'
                         required
@@ -77,20 +133,27 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='form-group'>
-                  <textarea
-                    name='message'
-                    id='message'
-                    className='form-control'
-                    rows='4'
-                    placeholder='Message'
-                    required
-                    onChange={handleChange}
-                  ></textarea>
+                  <label htmlFor="department">Which department would you like to take part in ?</label>
+                  <select
+                  id="department"
+                  name="entry.308229793"
+                  className='form-control'
+                  required
+                  > 
+                      <option value="Project">Project</option>
+                      <option value="Training">Training</option>
+                      <option value="Communication">Communication</option>
+                      <option value="Sponsoring">Sponsoring</option>
+                      <option value="Design">Design</option>
+                  </select>
+                </div>
+                <div className='form-group'>
+                  <input type="hidden" name="entry.308229793_sentinel"/>
                   <p className='help-block text-danger'></p>
                 </div>
                 <div id='success'></div>
                 <button type='submit' className='btn btn-custom btn-lg'>
-                  Send Message
+                  Send Application
                 </button>
               </form>
             </div>
